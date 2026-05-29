@@ -1,0 +1,161 @@
+.skills-container{
+    min-height: 100vh;
+
+    background: linear-gradient(
+        135deg,
+        #08171E,
+        #042B44,
+        #096B90
+    );
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 100px 40px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+/* Background glow */
+
+.skills-container::before{
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    background: rgba(113, 183, 213, 0.08);
+
+    border-radius: 50%;
+
+    top: -10%;
+    right: -10%;
+
+    filter: blur(100px);
+}
+
+/* TITLE */
+
+.skills-title{
+    color: white;
+
+    font-size: 60px;
+
+    margin-bottom: 60px;
+
+    letter-spacing: 2px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+/* SKILLS GRID */
+
+.skills-box{
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 35px;
+
+    max-width: 1000px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+/* SKILL CARD */
+
+.skill-card{
+    background: rgba(255,255,255,0.05);
+
+    color: white;
+
+    padding: 22px 45px;
+
+    border-radius: 18px;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s;
+
+    cursor: pointer;
+
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+/* Hover Effect */
+
+.skill-card:hover{
+    transform: translateY(-10px) scale(1.05);
+
+    background-color: #096B90;
+
+    border-color: #71B7D5;
+
+    box-shadow: 0px 0px 25px rgba(113,183,213,0.4);
+
+    color: white;
+}
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
+
+@media(max-width: 900px){
+
+    .skills-title{
+        font-size: 48px;
+    }
+
+    .skill-card{
+        font-size: 20px;
+
+        padding: 18px 35px;
+    }
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media(max-width: 600px){
+
+    .skills-container{
+        padding: 80px 20px;
+    }
+
+    .skills-title{
+        font-size: 38px;
+    }
+
+    .skills-box{
+        gap: 20px;
+    }
+
+    .skill-card{
+        width: 100%;
+
+        text-align: center;
+
+        font-size: 18px;
+
+        padding: 16px 20px;
+    }
+}

@@ -1,0 +1,174 @@
+.navbar{
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 22px 70px;
+
+    background: rgba(8, 23, 30, 0.85);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    z-index: 1000;
+
+    box-sizing: border-box;
+
+    transition: 0.3s;
+}
+
+/* LOGO */
+
+.logo{
+    color: white;
+
+    font-size: 38px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.logo:hover{
+    color: #71B7D5;
+}
+
+/* NAV LINKS */
+
+.nav-links{
+    display: flex;
+
+    align-items: center;
+
+    gap: 45px;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+/* LINKS */
+
+.nav-links a{
+    position: relative;
+
+    color: #A1CCDC;
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+/* HOVER */
+
+.nav-links a:hover{
+    color: white;
+}
+
+/* UNDERLINE EFFECT */
+
+.nav-links a::after{
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0%;
+
+    height: 3px;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        90deg,
+        #71B7D5,
+        #096B90
+    );
+
+    transition: 0.4s;
+}
+
+.nav-links a:hover::after{
+    width: 100%;
+}
+
+/* ACTIVE CLICK EFFECT */
+
+.nav-links a:active{
+    transform: scale(0.95);
+}
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
+
+@media(max-width: 900px){
+
+    .navbar{
+        padding: 18px 35px;
+    }
+
+    .logo{
+        font-size: 30px;
+    }
+
+    .nav-links{
+        gap: 25px;
+    }
+
+    .nav-links a{
+        font-size: 17px;
+    }
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media(max-width: 600px){
+
+    .navbar{
+        flex-direction: column;
+
+        gap: 18px;
+
+        padding: 18px 20px;
+    }
+
+    .logo{
+        font-size: 28px;
+    }
+
+    .nav-links{
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 18px;
+    }
+
+    .nav-links a{
+        font-size: 16px;
+    }
+}
